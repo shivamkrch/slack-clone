@@ -1,0 +1,15 @@
+{
+  "name": "slack-clone",
+  "version": "1.0.0",
+  "description": "A slack clone app using Socket.io",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "author": "Shivam Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}

@@ -1,0 +1,65 @@
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous"
+/>
+<link rel="stylesheet" type="text/css" href="./styles.css" />
+<title>Slack Clone App</title>
+
+<div class="container-fluid">
+  <div class="row" style="max-height: 100vh;">
+    <div class="col-sm-1 namespaces">
+      <!-- To be updated dynamically -->
+    </div>
+    <div class="col-sm-3 rooms">
+      <h3>
+        Rooms
+        <span class="curr-room-num-users"
+          ><span class="glyphicon glyphicon-home mr-2"></span
+          ><span id="rooms-num">rooms_num</span></span
+        >
+      </h3>
+      <ul class="room-list">
+        <!-- To be updated dynamically -->
+      </ul>
+    </div>
+    <div class="chat-panel col-sm-8">
+      <div class="room-header row col-6">
+        <div class="col-sm-6">
+          <h3 id="curr-room-name" class="curr-room-text">
+            Current Room
+            <span class="curr-room-num-users"
+              ><span class="glyphicon glyphicon-user mr-2"></span
+              ><span id="users-num">Users_num</span></span
+            >
+          </h3>
+        </div>
+        <div class="col-sm-4 search pull-right">
+          <span class="glyphicon glyphicon-search"></span>
+          <input type="text" id="search-box" placeholder="Search" />
+        </div>
+      </div>
+      <div class="message-form">
+        <form id="user-input">
+          <div class="col-sm-12">
+            <input
+              id="userMessage"
+              type="text"
+              placeholder="Enter your message..."
+              required
+            />
+          </div>
+        </form>
+      </div>
+      <ul id="messages" class="col-sm-12">
+        <!-- to be updated dynamically -->
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/joinNs.js"></script>
+<script src="/joinRoom.js"></script>
+<script src="/script.js"></script>
